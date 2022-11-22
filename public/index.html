@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <div id="ageOutput"><br><br></div>
+    <div id="nameOutput"><br><br></div>
+    <input class="inputAgeName" id="input1" type="text" name="quantity" placeholder="Введите имя и/или возраст пользователя">
+    <input id="button" type="button" value="Сохранить" /><br><br>
+
+    <div id="countryOutput"><br><br></div>
+    <input class="inputAgeName" id="inputCountry" type="text" name="quantity" placeholder="Введите страну пользователя">
+    <input id="saveCountry" type="button" value="Сохранить" /><br><br>
+
+    <button id="sendUser">Отправить данные</button>
+    <p id="sendUserResponse"></p>
+
+    <button id="getUsers">Получить список пользователей</button>
+    <p id="getUsersResponse"></p>
+
+    <input class="inputAgeName" id="inputUserId" type="text" placeholder="Введите id пользователя для удаления">
+    <button id="deleteUser">Удалить пользователя</button>
+    <p id="deleteUsersResponse"></p>
+
+    <script type="module" src="/app.js"></script>
+</body>
+
+</html>
