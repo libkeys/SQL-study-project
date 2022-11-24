@@ -12,14 +12,27 @@
 
 <body>
 
-    <div id="ageOutput"><br><br></div>
-    <div id="nameOutput"><br><br></div>
-    <input class="inputAgeName" id="input1" type="text" name="quantity" placeholder="Введите имя и/или возраст пользователя">
-    <input id="button" type="button" value="Сохранить" /><br><br>
+    <div class="input-group">
+        <div class="input-group__item">
+            <div id="ageOutput"><br><br></div>
+            <div id="nameOutput"><br><br></div>
+            <div class="input-group__part-of-item">
+                <input class="input-group__input" id="input1" type="text" name="quantity"
+                    placeholder="Введите имя и/или возраст пользователя">
+                <input class="input-group__input-button" id="button" type="button" value="Сохранить" /><br><br>
+            </div>
+        </div>
 
-    <div id="countryOutput"><br><br></div>
-    <input class="inputAgeName" id="inputCountry" type="text" name="quantity" placeholder="Введите страну пользователя">
-    <input id="saveCountry" type="button" value="Сохранить" /><br><br>
+        <div class="input-group__item">
+            <div id="countryOutput"><br><br></div>
+            <div class="input-group__part-of-item">
+                <input class="input-group__input" id="inputCountry" type="text" name="quantity"
+                    placeholder="Введите страну пользователя">
+                <input class="input-group__input-button" id="saveCountry" type="button" value="Сохранить" /><br><br>
+            </div>
+        </div>
+    </div>
+
 
     <button id="sendUser">Отправить данные</button>
     <p id="sendUserResponse"></p>

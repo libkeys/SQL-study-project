@@ -1,7 +1,29 @@
-input {
+.input-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px;
+  margin-top: 10px;
+}
+@media (max-width: 860px) {
+  .input-group {
+    grid-template-columns: auto;
+    grid-template-rows: 100px 100px;
+  }
+}
+.input-group__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input-group__part-of-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.input-group__input {
   width: 300px;
 }
-
-header {
-  background-color: 0;
+.input-group__input-button {
+  margin-top: 10px;
+  width: 200px;
 }
