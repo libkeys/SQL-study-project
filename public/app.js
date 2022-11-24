@@ -39,37 +39,27 @@ function handlerCountryClick() {
     console.log(temporaryUser)
 }
 
-function createUser(job) {
-    function creationUserClass(nationality) {
-        class User {
-            userBrowser = navigator.userAgent;
-            constructor(params) {
-                this.age = 'age' in params ? params.age : 24;
-                this.name = 'name' in params ? params.name : 'Alex';
-                this.country = 'country' in params ? params.country : 'Australia';
-                this.nationality = nationality
-
-                this.job = job
-            }
-        }
-
-        return User;
+class User {
+    constructor(params) {
+        this.age = 'age' in params ? params.age : 24;
+        this.name = 'name' in params ? params.name : 'Alex';
+        this.country = 'country' in params ? params.country : 'Australia';
     }
-
-    return creationUserClass;
 }
 
 function clearAll() {
     input.value = '';
     input.Country = '';
     temporaryUser = {}
+    ageOutput.innerText = '';
+    nameOutput.innerText = '';
+    countryOutput.innerText = '';
 }
 
 function handlerSendUserClick() {
     sendUserResponse.innerText = 'данные отправлены на сервер';
-    let userClassFunction = createUser('developer');
-    let NewClass = userClassFunction('russian');
-    let user = new NewClass(temporaryUser);
+    let user = new User(temporaryUser);
+
     clearAll();
     let response = fetch('send-user', {
         method: 'POST',

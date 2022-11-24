@@ -14,8 +14,6 @@
 
     <div class="input-group">
         <div class="input-group__item">
-            <div id="ageOutput"><br><br></div>
-            <div id="nameOutput"><br><br></div>
             <div class="input-group__part-of-item">
                 <input class="input-group__input" id="input1" type="text" name="quantity"
                     placeholder="Введите имя и/или возраст пользователя">
@@ -23,14 +21,20 @@
             </div>
         </div>
 
+
         <div class="input-group__item">
-            <div id="countryOutput"><br><br></div>
             <div class="input-group__part-of-item">
                 <input class="input-group__input" id="inputCountry" type="text" name="quantity"
                     placeholder="Введите страну пользователя">
                 <input class="input-group__input-button" id="saveCountry" type="button" value="Сохранить" /><br><br>
             </div>
         </div>
+    </div>
+
+    <div class="output">
+        <p id="ageOutput"></p>
+        <p id="nameOutput"></p>
+        <p id="countryOutput"></p>
     </div>
 
 
@@ -40,8 +44,11 @@
     <button id="getUsers">Получить список пользователей</button>
     <p id="getUsersResponse"></p>
 
-    <input class="inputAgeName" id="inputUserId" type="text" placeholder="Введите id пользователя для удаления">
-    <button id="deleteUser">Удалить пользователя</button>
+    <div class="input-group-separate">
+        <input class="input-group__input" id="inputUserId" type="text"
+            placeholder="Введите id пользователя для удаления">
+        <button class="input-group__input-button" id="deleteUser">Удалить пользователя</button>
+    </div>
     <p id="deleteUsersResponse"></p>
 
     <script type="module" src="/app.js"></script>

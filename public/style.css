@@ -27,3 +27,21 @@
   margin-top: 10px;
   width: 200px;
 }
+.input-group-separate {
+  width: 400px;
+}
+.input-group-separate button {
+  margin-top: 5px;
+}
+
+.output {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px;
+}
+@media (max-width: 860px) {
+  .output {
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 80px 80px;
+  }
+}
